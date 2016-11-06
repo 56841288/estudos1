@@ -44,3 +44,20 @@ Route::post('menu','ArticlesController@Menu');
 Route::get('menu', function () {
     return view('menu');
 });
+
+// Authentication routes...
+
+Route::get('login', 'Auth\AuthController@showLoginForm');
+Route::get('logout', 'Auth\AuthController@logout');
+
+// Registration Routes...
+Route::get('register', 'Auth\AuthController@showRegistrationForm');
+
+// Password Reset Routes...
+Route::get('password/reset/{token?}', 'Auth\PasswordController@showResetForm');
+Route::post('password/email', 'Auth\PasswordController@sendResetLinkEmail');
+Route::post('password/reset', 'Auth\PasswordController@reset');
+
+Route::post('auth/login', 'Auth\AuthController@login');
+Route::post('auth/register', 'Auth\AuthController@register');
+

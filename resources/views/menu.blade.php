@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>estudos</title>
-<link rel="stylesheet" href="http://localhost:8083/estudos1/public/wheeltz-source/nav_wheel-css-only/styles/wheel/sunpeach.css" media="screen" />
+<link rel="stylesheet" href="http:/estudos1/public/wheeltz-source/nav_wheel-css-only/styles/wheel/sunpeach.css" media="screen" />
 <!--[if lt IE 9]>
 <link rel="stylesheet" href="styles/ie.css" media="screen" />
 <![endif]-->
@@ -64,6 +64,7 @@
   </li>
   
 </ul>
+@yield('content')
 
 <!-- end menu !-->
 
