@@ -22,9 +22,12 @@ Route::group(['middleware' => 'web'], function () {
 	Route::get('articles/update','ArticlesController@update');
     Route::get('articles/show','ArticlesController@show');
     Route::get('articles/edit','ArticlesController@edit');
+    Route::post('teste','ArticlesController@teste');
 
 
-
+Route::get('teste', function () {
+    return view('teste');
+});
 
 
 

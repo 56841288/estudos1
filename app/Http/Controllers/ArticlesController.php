@@ -96,6 +96,11 @@ class ArticlesController extends Controller
     {
         return view('menu');
     }
+
+    public function teste()
+    {
+        return view('teste');
+    }
     	
 
     		
