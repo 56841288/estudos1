@@ -13,7 +13,11 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        view()->composer('*', function($view){
+            $layout = 'layouts.php';
+            $view->with(compact('layout'));
+
+        });
     }
 
     /**

@@ -19,16 +19,20 @@ Route::group(['middleware' => 'web'], function () {
 	Route::get('articles/index','ArticlesController@index');
 	Route::get('articles/create','ArticlesController@create');
 	Route::get('articles/destroy','ArticlesController@destroy');
-	Route::get('articles/update','ArticlesController@update');
+    Route::get('articles/update','ArticlesController@update');
     Route::get('articles/show','ArticlesController@show');
     Route::get('articles/edit','ArticlesController@edit');
     Route::post('teste','ArticlesController@teste');
+Route::post('menu','ArticlesController@Menu');
 
 
 Route::get('teste', function () {
     return view('teste');
 });
 
+Route::get('menu', function () {
+    return view('menu');
+});
 
 
 });// aqui fecha a minha estrura de controle de acesso
@@ -41,12 +45,8 @@ Route::get('/', function () {
 Route::auth();
 
 Route::get('/home', 'HomeController@index');
-Route::post('menu','ArticlesController@Menu');
 
 
-Route::get('menu', function () {
-    return view('menu');
-});
 
 // Authentication routes...
 
